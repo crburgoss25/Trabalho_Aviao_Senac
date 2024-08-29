@@ -13,7 +13,6 @@ public class Main
         Scanner sc = new Scanner(System.in);
         System.out.println("----------------------------------------------\n");
         System.out.println("|Sistema para Criar Empresas - AULA RAFAEL");
-        System.out.println("|Digite a opcao desejada");
         System.out.println("|1 - Criar Empresa");
         System.out.println("|2 - Adicionar Funcionarios a Empresa");
         System.out.println("|3 - Adicionar Departamento a Empresa");
@@ -29,15 +28,30 @@ public class Main
             switch(opcao)
             {
                 case 1:
-                    sc.nextLine();
                     System.out.println("Por favor Digite o nome da Empresa: ");
                     Empresa.setNomeEmpresa(sc.nextLine());
 
                     System.out.println("Digite o CNPJ da Empresa: ");
                     Empresa.setCnpjEmpresa(sc.nextLine());
+                    Empresa.idEmpresa++;
                     break;
-
                     case 2:
+                        System.out.println("Por favor Digite o Id da Empresa\n");
+                        Empresa.idEmpresa = sc.nextInt();
+                        if(Empresa.idEmpresa > 0 )
+                        {
+                            sc.nextLine();
+                            System.out.println("Por favor Digite o nome do funcionario\n");
+                            Funcionario.setNomeFuncionario(sc.nextLine());
+
+
+                            System.out.println("Digite o Salario do Funcionario:\n");
+                            Funcionario.setSalarioFuncionario(sc.nextDouble());
+                        }
+                        else
+                        {
+                            System.out.println("Empresa nao encontrada");
+                        }
                         break;
                         case 3:
                             break;

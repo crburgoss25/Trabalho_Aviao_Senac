@@ -4,6 +4,7 @@ public class Empresa
 {
     static String nomeEmpresa;
     static String cnpjEmpresa;
+    public static int idEmpresa = 0;
     public static int qtdDepartamento[] = new int[Departamento.MAX_DEPARTAMENTOS];
 
 
