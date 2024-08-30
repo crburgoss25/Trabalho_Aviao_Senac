@@ -8,6 +8,12 @@ public class Funcionario
     public static double salarioFuncionario;
     public static Date dataAdmissao;
 
+    public Funcionario(String nomeFuncionario, double salarioFuncionario, Date dataAdmissao)
+    {
+        Funcionario.nomeFuncionario = nomeFuncionario;
+        Funcionario.salarioFuncionario = salarioFuncionario;
+        Funcionario.dataAdmissao = dataAdmissao;
+    }
     public static String getNomeFuncionario() {
         return nomeFuncionario;
     }
